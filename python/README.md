@@ -6,7 +6,7 @@ Collezione di utility Python riutilizzabili e ben documentate.
 
 - [`decorators.py`](decorators.py) - Decoratori utili (timing, retry, cache)
 - [`file_utils.py`](file_utils.py) - Utility per I/O file robusto
-- [`data_processing.py`](data_processing.py) - Funzioni per elaborazione dati
+- [`data_processing.py`](data_processing.py) - Funzioni per analisi e elaborazione dati
 
 ## Utilizzo
 

@@ -19,16 +19,18 @@ Esegui `python tools/build_index.py` per aggiornare l'indice degli snippet in qu
 
 ## Indice degli Snippet
 *Generato automaticamente con `python tools/build_index.py`*
-**Totale snippet: 5**
+**Totale snippet: 8**
 ### PYTHON
 - [`Crea backup se file esiste e backup è richiesto`](python/file_utils.py) - Utility per I/O file robusto con gestione errori e backup. Dipendenze: pathlib, shutil (standard library) Complessità: O(n) dove n è (*O(n) dove n è la dimensione del file*) [Req: pathlib, shutil (standard library)]
 - [`Potrebbe fallire occasionalmente`](python/decorators.py) - Decoratori Python utili per timing, retry e caching. Dipendenze: standard library Complessità: O(1) per applicazione, varia per esecuzione (*O(1) per applicazione, varia per esecuzione*) [Req: standard library]
+- [`Try to import numpy and pandas, fallback to pure Python if not available`](python/data_processing.py) - Utility per elaborazione e analisi dati con numpy e pandas. Dipendenze: numpy, pandas (opzionali - fallback per pure Python) Complessità: (*O(n) per la maggior parte delle operazioni*) [Req: numpy, pandas (opzionali - fallback per pure Python)]
 ### MATLAB
 - [`% Signal Processing Utilities`](matlab/signal_processing.m) - % Signal Processing Utilities (*varia per funzione (specificata in ogni caso)*) [Req: Signal Processing Toolbox]
 ### C
 - [`Data Structures`](c/data_structures.c) - define STACK_MAX_SIZE 128 (*O(1) per tutte le operazioni base*)
+- [`Memory Utils`](c/memory_utils.c) - define POOL_BLOCK_SIZE 64 (*O(1) per allocazione pool, O(n) per operazioni string*)
 ### CPP
 - [`Smart Ptr Utils`](cpp/smart_ptr_utils.hpp) - ifndef SMART_PTR_UTILS_HPP (*O(1) per creazione/distruzione*)
-
+- [`Template Metaprogramming`](cpp/template_metaprogramming.hpp) - ifndef TEMPLATE_METAPROGRAMMING_HPP (*O(1) runtime (tutto compile-time)*)
 ## Licenza
 [MIT](LICENSE)

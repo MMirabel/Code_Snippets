@@ -5,8 +5,7 @@ Collezione di strutture dati leggere e pattern per sistemi embedded.
 ## Contenuti
 
 - [`data_structures.c`](data_structures.c) - Stack, queue, linked list implementazioni leggere
-- [`memory_utils.c`](memory_utils.c) - Gestione memoria sicura e pool allocator
-- [`embedded_patterns.c`](embedded_patterns.c) - Pattern comuni per microcontrollori
+- [`memory_utils.c`](memory_utils.c) - Gestione memoria sicura, pool allocator, operazioni string sicure
 
 ## Utilizzo
 

@@ -5,8 +5,7 @@ Collezione di idiomi C++ moderni, header-only e pattern RAII.
 ## Contenuti
 
 - [`smart_ptr_utils.hpp`](smart_ptr_utils.hpp) - Utility per smart pointers e RAII
-- [`template_metaprogramming.hpp`](template_metaprogramming.hpp) - Type traits e template tricks
-- [`concurrent_utils.hpp`](concurrent_utils.hpp) - Pattern per programmazione concorrente
+- [`template_metaprogramming.hpp`](template_metaprogramming.hpp) - Type traits, SFINAE, compile-time computations
 
 ## Utilizzo
 
