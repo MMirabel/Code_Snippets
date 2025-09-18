@@ -5,6 +5,10 @@ line-oriented data coming from a configurable serial port and persist it
 on disk. It handles directory creation, graceful shutdown on CTRL+C, and
 optional limits on the number of lines recorded."""
 
+# Example CLI invocations:
+# python Python/Serial_COM/Serial_SaveData.py output.txt
+# python Python/Serial_COM/Serial_SaveData.py data.log --port COM3 --baudrate 115200 --max-lines 1000
+
 import argparse
 import sys
 from pathlib import Path
