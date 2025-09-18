@@ -1,21 +1,21 @@
-# Snippets di Programmazione (Python, MATLAB/Simulink, C/C++)
+# Programming Snippets (Python, MATLAB/Simulink, C/C++)
 
-Raccolta curata di snippet riutilizzabili, idiomatici e documentati. Ogni snippet è autosufficiente, con prerequisiti, complessità e test/usage minimo.
+Curated collection of reusable, idiomatic, and well-documented snippets. Each snippet is self-contained, with prerequisites, complexity, and minimal test/usage example.
 
-## Obiettivi
-- **Qualità**: stile consistente, lint, formattazione automatica.
-- **Portabilità**: evitare dipendenze superflue.
-- **Didattica**: spiegazioni concise e link a risorse.
+## Goals
+- **Quality**: consistent style, linting, automatic formatting.
+- **Portability**: avoid unnecessary dependencies.
+- **Educational**: concise explanations and links to resources.
 
-## Come navigare
-- [`python/`](python/): utility generiche (decorator, I/O robusto, ecc.)
-- [`matlab/`](matlab/): elaborazione segnali, utilità numeriche.
-- [`simulink/`](simulink/): modelli `.slx` con README e screenshot.
-- [`c/`](c/): strutture dati leggere e pattern embedded.
-- [`cpp/`](cpp/): header-only idiomatici (RAII, traits, ecc.)
+## How to navigate
+- [`python/`](python/): general utilities (decorators, robust I/O, etc.)
+- [`matlab/`](matlab/): signal processing, numerical utilities.
+- [`simulink/`](simulink/): `.slx` models with README and screenshots.
+- [`c/`](c/): lightweight data structures and embedded patterns.
+- [`cpp/`](cpp/): idiomatic header-only (RAII, traits, etc.)
 
-## Indicizzazione
-Esegui `python tools/build_index.py` per aggiornare l’indice degli snippet in questo README.
+## Indexing
+Run `python tools/build_index.py` to update the snippet index in this README.
 
-## Licenza
+## License
 [MIT](LICENSE)

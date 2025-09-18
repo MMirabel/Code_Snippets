@@ -1,22 +1,22 @@
-# Contributi
+# Contributing
 
-Grazie! Prima di aprire una PR:
+Thank you! Before opening a PR:
 
-1. **Struttura snippet**
-   - Un file (o coppia .h/.c) autosufficiente.
-   - In testa: breve doc con scopo, complessità, requisiti, esempio d’uso.
-2. **Stile**
+1. **Snippet structure**
+   - A self-contained file (or .h/.c pair).
+   - At the top: brief doc with purpose, complexity, requirements, usage example.
+2. **Style**
    - Python: `ruff` + `black`.
    - C/C++: `clang-format`.
-   - MATLAB: convenzioni MathWorks; niente variabili 1-lettera.
+   - MATLAB: MathWorks conventions; no single-letter variables.
 3. **Test/Usage**
-   - Inserire un blocco d’esempio eseguibile (o `main()` minimale).
+   - Include an executable example block (or minimal `main()`).
 4. **Naming**
-   - snake_case per Python/MATLAB, kebab-case per file, PascalCase per tipi C++.
+   - snake_case for Python/MATLAB, kebab-case for files, PascalCase for C++ types.
 5. **Commit**
-   - Messaggi chiari, brevi. Esempio: `python: add debounce decorator`.
+   - Clear, concise messages. Example: `python: add debounce decorator`.
 
-Esegui localmente:
+Run locally:
 
 ruff check && black --check .
 clang-format --dry-run -Werror c/.c c/.h cpp/*.hpp
