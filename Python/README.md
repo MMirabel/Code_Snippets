@@ -16,6 +16,7 @@ This folder contains a collection of useful Python code snippets for various pur
 ## Snippet index
 
 - `Serial_COM/Serial_SaveData.py`
+- `Time/time_count.py`
 <!-- snippet-index:end -->
 
 ## How to contribute

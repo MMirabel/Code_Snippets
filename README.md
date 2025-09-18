@@ -20,6 +20,7 @@ Curated collection of reusable, idiomatic, and well-documented snippets. Each sn
 
 ### Python
 - `Python/Serial_COM/Serial_SaveData.py`
+- `Python/Time/time_count.py`
 <!-- snippet-index:end -->
 
 ## Indexing
