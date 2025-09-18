@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.env
+
+# C/C++
+build/
+*.o
+*.a
+*.exe
+
+# MATLAB/Simulink
+slprj/
+*.asv
+*.mdl.r20*
+*.slxc
+*.mex*
+*.autosave
+
+# Misc
+.DS_Store
+.idea/
+.vscode/

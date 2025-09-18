@@ -1,0 +1,7 @@
+* text=auto eol=lf
+
+# Tratta header-only C++ come testo
+*.hpp linguist-language=C++
+
+# Evita diff binari rumorosi per .slx
+*.slx -diff
