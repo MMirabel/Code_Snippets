@@ -12,6 +12,12 @@ This folder contains a collection of useful MATLAB code snippets for various pur
 - Process automation
 - Examples of functions and scripts
 
+<!-- snippet-index:start -->
+## Snippet index
+
+_No snippets found yet._
+<!-- snippet-index:end -->
+
 ## How to contribute
 
 1. Add your snippet as a `.m` file with a descriptive name.

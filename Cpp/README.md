@@ -12,6 +12,12 @@ This folder contains a collection of useful C++ code snippets for various purpos
 - Process automation
 - Examples of functions, classes, and scripts
 
+<!-- snippet-index:start -->
+## Snippet index
+
+_No snippets found yet._
+<!-- snippet-index:end -->
+
 ## How to contribute
 
 1. Add your snippet as a `.cpp` or `.h` file with a descriptive name.

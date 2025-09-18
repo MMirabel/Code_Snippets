@@ -12,6 +12,12 @@ This folder contains a collection of useful Python code snippets for various pur
 - Process automation
 - Examples of functions, classes, and scripts
 
+<!-- snippet-index:start -->
+## Snippet index
+
+- `Serial_COM/Serial_SaveData.py`
+<!-- snippet-index:end -->
+
 ## How to contribute
 
 1. Add your snippet as a `.py` file with a descriptive name.

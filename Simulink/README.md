@@ -12,6 +12,12 @@ This folder contains a collection of useful Simulink models and snippets for var
 - Visualization
 - Examples of blocks, subsystems, and scripts
 
+<!-- snippet-index:start -->
+## Snippet index
+
+_No snippets found yet._
+<!-- snippet-index:end -->
+
 ## How to contribute
 
 1. Add your snippet or model as a `.slx` or `.mdl` file with a descriptive name.
