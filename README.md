@@ -1,4 +1,5 @@
-# Programming Snippets (Python, MATLAB/Simulink, C/C++)
+# Programming Snippets 
+(Python, MATLAB/Simulink, C/C++, Arduino, STM32)
 
 Curated collection of reusable, idiomatic, and well-documented snippets. Each snippet is self-contained, with prerequisites, complexity, and minimal test/usage example.
 
