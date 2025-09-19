@@ -15,7 +15,7 @@ This folder contains a collection of useful Arduino code snippets for various pu
 <!-- snippet-index:start -->
 ## Snippet index
 
-_No snippets found yet._
+- `Sensors/ADXL345/ADXL345.ino`
 <!-- snippet-index:end -->
 
 ## How to contribute

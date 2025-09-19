@@ -23,6 +23,9 @@ Curated collection of reusable, idiomatic, and well-documented snippets. Each sn
 ### Python
 - `Python/Serial_COM/Serial_SaveData.py`
 - `Python/Time/time_count.py`
+
+### Arduino
+- `Arduino/Sensors/ADXL345/ADXL345.ino`
 <!-- snippet-index:end -->
 
 ## Indexing
