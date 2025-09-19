@@ -27,6 +27,7 @@ Curated collection of reusable, idiomatic, and well-documented snippets. Each sn
 
 ### Arduino
 - `Arduino/Sensors/ADXL345/ADXL345.ino`
+- `Arduino/Utility/ScanI2C.ino`
 <!-- snippet-index:end -->
 
 ## Indexing
