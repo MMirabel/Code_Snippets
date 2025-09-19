@@ -1,10 +1,21 @@
+/*********************************************************************************************
+**********************************************************************************************
+PROJECT:          Arduino Snippets
+COMPONENT:        Utility - ScanI2C
+FILE:             ScanI2C.ino
+AUTHOR:           Ing. Mirko Mirabella
+                  m.mirabella@neptunengineering.com
+                  www.neptunengineering.com
+REVISION:         v1.0
+DATE:             17/02/2025
+**********************************************************************************************/
 /*
   I2C Bus Scanner Snippet
   Continuously scans the I2C bus, reports detected device addresses, and flags bus errors.
   Wiring (Arduino Uno defaults):
     - SDA -> A4
     - SCL -> A5
-    - Pull-up resistors (4.7 kΩ typical) to 3.3V or 5V as required by your bus
+    - Pull-up resistors (4.7 kOhm typical) to 3.3V or 5V as required by your bus
   Usage:
     1. Power your I2C peripherals and upload this sketch.
     2. Open the Serial Monitor at 115200 baud to observe scan results.
