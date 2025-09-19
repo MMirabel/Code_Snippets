@@ -1,14 +1,14 @@
 /*********************************************************************************************
-**********************************************************************************************
-PROJECT:          Arduino Snippets
-COMPONENT:        Utility - ScanI2C
+PROJECT:          Code Snippets
+COMPONENT:        Arduino/Utility
 FILE:             ScanI2C.ino
 AUTHOR:           Ing. Mirko Mirabella
                   m.mirabella@neptunengineering.com
                   www.neptunengineering.com
-REVISION:         v1.0
-DATE:             17/02/2025
+REVISION:         v. 1.0
+DATE:             19/09/2025
 **********************************************************************************************/
+
 /*
   I2C Bus Scanner Snippet
   Continuously scans the I2C bus, reports detected device addresses, and flags bus errors.

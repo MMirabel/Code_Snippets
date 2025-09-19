@@ -1,4 +1,15 @@
-﻿/*
+/*********************************************************************************************
+PROJECT:          Code Snippets
+COMPONENT:        Arduino/Sensors/ADXL345
+FILE:             ADXL345.ino
+AUTHOR:           Ing. Mirko Mirabella
+                  m.mirabella@neptunengineering.com
+                  www.neptunengineering.com
+REVISION:         v. 1.0
+DATE:             19/09/2025
+**********************************************************************************************/
+
+/*
   ADXL345 Quickstart Snippet
   Demonstrates initialization, calibration, and periodic acceleration output (in g) for the ADXL345 accelerometer over I2C.
   Wiring (default Arduino Uno pins):

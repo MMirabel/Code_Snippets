@@ -1,3 +1,14 @@
+# /*********************************************************************************************
+# PROJECT:          Code Snippets
+# COMPONENT:        Python/Serial_COM
+# FILE:             Serial_SaveData.py
+# AUTHOR:           Ing. Mirko Mirabella
+#                   m.mirabella@neptunengineering.com
+#                   www.neptunengineering.com
+# REVISION:         v. 1.0
+# DATE:             19/09/2025
+# **********************************************************************************************/
+
 """Stream data from a serial port to a text file.
 
 This module provides a small CLI utility around pySerial to capture

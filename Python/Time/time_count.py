@@ -1,3 +1,14 @@
+# /*********************************************************************************************
+# PROJECT:          Code Snippets
+# COMPONENT:        Python/Time
+# FILE:             time_count.py
+# AUTHOR:           Ing. Mirko Mirabella
+#                   m.mirabella@neptunengineering.com
+#                   www.neptunengineering.com
+# REVISION:         v. 1.0
+# DATE:             19/09/2025
+# **********************************************************************************************/
+
 """Command-line utility to measure or repeat a sleep interval.
 
 Example::
