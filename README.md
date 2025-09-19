@@ -14,6 +14,8 @@ Curated collection of reusable, idiomatic, and well-documented snippets. Each sn
 - [`Simulink/`](Simulink/): `.slx` models with README and screenshots.
 - [`C/`](C/): lightweight data structures and embedded patterns.
 - [`Cpp/`](Cpp/): idiomatic header-only (RAII, traits, etc.)
+- [`Arduino/`](Arduino/): rapid prototyping sketches and reusable libraries.
+- [`STM32/`](STM32/): HAL/LL patterns, startup code, and board bring-up notes.
 
 <!-- snippet-index:start -->
 ## Snippet index

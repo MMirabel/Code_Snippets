@@ -29,6 +29,8 @@ SECTIONS: tuple[Section, ...] = (
     Section("Cpp", "Cpp", ("**/*.hpp", "**/*.cpp"), readme_header="# C++ Snippets"),
     Section("MATLAB", "MATLAB", ("**/*.m",), readme_header="# MATLAB Snippets"),
     Section("Simulink", "Simulink", ("**/*.slx",), readme_header="# Simulink Snippets"),
+    Section("Arduino", "Arduino", ("**/*.ino", "**/*.h", "**/*.cpp"), readme_header="# Arduino Snippets"),
+    Section("STM32", "STM32", ("**/*.c", "**/*.h", "**/*.cpp"), readme_header="# STM32 Snippets"),
 )
 
 README_MARKERS = (
