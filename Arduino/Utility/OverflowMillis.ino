@@ -1,13 +1,12 @@
-﻿/*********************************************************************************************
-**********************************************************************************************
-PROJECT:          Arduino Snippets
-COMPONENT:        Utility - OverflowMillis
+/*********************************************************************************************
+PROJECT:          Code Snippets
+COMPONENT:        Arduino/Utility
 FILE:             OverflowMillis.ino
 AUTHOR:           Ing. Mirko Mirabella
                   m.mirabella@neptunengineering.com
                   www.neptunengineering.com
-REVISION:         v1.0
-DATE:             17/02/2025
+REVISION:         v. 1.0
+DATE:             19/09/2025
 **********************************************************************************************/
 /*
   Millis Overflow Demonstration Snippet
@@ -54,7 +53,7 @@ void loop() {
   const unsigned long now = millis();
   checkOverflow(now);
 
-  if ((long)(now - nextPrint) >= 0) {
+  while ((long)(now - nextPrint) >= 0) {
     logTimestamp(now);
     nextPrint += PRINT_INTERVAL_MS;
   }
@@ -76,8 +75,23 @@ void forceMillisOverflow() {
 }
 
 void logTimestamp(unsigned long now) {
+  static bool firstSample = true;
+  static unsigned long previous = 0;
+
   Serial.print(F("millis(): "));
   Serial.println(now);
+
+  if (firstSample) {
+    Serial.println(F("Delta since last print: -- (first sample)"));
+    firstSample = false;
+  } else {
+    const unsigned long delta = now - previous; // Unsigned subtraction survives overflow
+    Serial.print(F("Delta since last print: "));
+    Serial.print(delta);
+    Serial.println(F(" ms"));
+  }
+
+  previous = now;
 }
 
 void checkOverflow(unsigned long now) {
@@ -87,3 +101,4 @@ void checkOverflow(unsigned long now) {
   }
   lastMillis = now;
 }
+
