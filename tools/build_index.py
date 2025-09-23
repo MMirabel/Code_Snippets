@@ -1,4 +1,13 @@
-#!/usr/bin/env python3
+# /*********************************************************************************************
+# PROJECT:          Code Snippets
+# COMPONENT:        Tools
+# FILE:             build_index.py
+# AUTHOR:           Ing. Mirko Mirabella
+#                   m.mirabella@neptunengineering.com
+#                   www.neptunengineering.com
+# REVISION:         v. 1.2
+# DATE:             23/09/2025
+# **********************************************************************************************/
 """Generate snippet indexes inside the repository READMEs."""
 
 from __future__ import annotations
