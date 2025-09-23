@@ -22,6 +22,7 @@ Curated collection of reusable, idiomatic, and well-documented snippets. Each sn
 ## Snippet index
 
 ### Python
+- `Python/File/RenameVideo.py`
 - `Python/Serial_COM/Serial_SaveData.py`
 - `Python/Time/time_count.py`
 

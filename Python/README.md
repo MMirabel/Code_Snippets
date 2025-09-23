@@ -15,6 +15,7 @@ This folder contains a collection of useful Python code snippets for various pur
 <!-- snippet-index:start -->
 ## Snippet index
 
+- `File/RenameVideo.py`
 - `Serial_COM/Serial_SaveData.py`
 - `Time/time_count.py`
 <!-- snippet-index:end -->
