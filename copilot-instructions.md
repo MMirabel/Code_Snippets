@@ -20,7 +20,11 @@ Questo file raccoglie le indicazioni che Copilot deve seguire ad ogni generazion
 ```
 
 - [ ] `Aggiorna README` - Esegui lo script Python dedicato (`python tool/build_index.py`) per aggiornare tutti i file README interessati dal cambiamento.
-- [ ] comando-3 - inserisci altri comandi, uno per riga.
+- [ ] `Usa lingua inglese` - Scrivi tutto il codice, i commenti e le spiegazioni in inglese.
+- [ ] `Usa stile di codice coerente` - Segui uno stile di codice coerente e leggibile, con indentazione, spaziatura e nomi di variabili chiari.
+- [ ] `Includi commenti esplicativi` - Aggiungi commenti esplicativi per ogni sezione di codice, spiegando cosa fa e perché.
+- [ ] `Verifica errori comuni` - Controlla il codice per errori comuni, come errori di sintassi, variabili non definite o problemi di logica.
+- [ ] `Mantieni il contesto` - Assicurati che il codice generato sia coerente con il contesto del progetto e con le specifiche fornite.
 
 ## Modalita' d'uso
 ## Note aggiuntive
