@@ -22,14 +22,22 @@ Curated collection of reusable, idiomatic, and well-documented snippets. Each sn
 ## Snippet index
 
 ### Python
-- `Python/File/RenameVideo.py`
-- `Python/Serial_COM/Serial_SaveData.py`
-- `Python/Time/time_count.py`
+- `File`
+  - `RenameVideo.py`
+- `GIT`
+  - `update_gitignore.py`
+- `Serial_COM`
+  - `Serial_SaveData.py`
+- `Time`
+  - `time_count.py`
 
 ### Arduino
-- `Arduino/Sensors/ADXL345/ADXL345.ino`
-- `Arduino/Utility/OverflowMillis.ino`
-- `Arduino/Utility/ScanI2C.ino`
+- `Sensors`
+  - `ADXL345`
+    - `ADXL345.ino`
+- `Utility`
+  - `OverflowMillis.ino`
+  - `ScanI2C.ino`
 <!-- snippet-index:end -->
 
 ## Indexing

@@ -5,8 +5,8 @@
 # AUTHOR:           Ing. Mirko Mirabella
 #                   m.mirabella@neptunengineering.com
 #                   www.neptunengineering.com
-# REVISION:         v. 1.2
-# DATE:             23/09/2025
+# REVISION:         v. 1.4
+# DATE:             13/10/2025
 # **********************************************************************************************/
 """Generate snippet indexes inside the repository READMEs."""
 
@@ -14,12 +14,20 @@ from __future__ import annotations
 
 import pathlib
 from collections import OrderedDict
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
 INDEX_MARKER_START = "<!-- snippet-index:start -->"
 INDEX_MARKER_END = "<!-- snippet-index:end -->"
+
+
+@dataclass
+class TreeNode:
+    """Represent a node inside the snippet tree."""
+
+    children: dict[str, "TreeNode"] = field(default_factory=dict)
+    files: set[str] = field(default_factory=set)
 
 
 @dataclass(frozen=True)
@@ -41,6 +49,47 @@ SECTIONS: tuple[Section, ...] = (
     Section("Arduino", "Arduino", ("**/*.ino", "**/*.h", "**/*.cpp"), readme_header="# Arduino Snippets"),
     Section("STM32", "STM32", ("**/*.c", "**/*.h", "**/*.cpp"), readme_header="# STM32 Snippets"),
 )
+
+SECTION_BY_LABEL: dict[str, Section] = {section.label: section for section in SECTIONS}
+
+
+def _insert_path(node: TreeNode, parts: list[str]) -> None:
+    """Insert a path split into parts inside the tree."""
+
+    if not parts:
+        return
+    head, *tail = parts
+    if not tail:
+        node.files.add(head)
+        return
+    child = node.children.setdefault(head, TreeNode())
+    _insert_path(child, tail)
+
+
+def _build_tree_structure(files: list[str], base_folder: str) -> TreeNode:
+    """Build a hierarchical tree out of the collected file paths."""
+
+    tree = TreeNode()
+    base_parts = list(pathlib.PurePosixPath(base_folder).parts)
+    for file_path in files:
+        parts = list(pathlib.PurePosixPath(file_path).parts)
+        if base_parts and parts[: len(base_parts)] == base_parts:
+            parts = parts[len(base_parts) :]
+        _insert_path(tree, parts)
+    return tree
+
+
+def _render_tree_lines(node: TreeNode, level: int) -> list[str]:
+    """Render the hierarchical tree into Markdown bullet lines."""
+
+    lines: list[str] = []
+    indent = "  " * level
+    for directory in sorted(node.children):
+        lines.append(f"{indent}- `{directory}`")
+        lines.extend(_render_tree_lines(node.children[directory], level + 1))
+    for file_name in sorted(node.files):
+        lines.append(f"{indent}- `{file_name}`")
+    return lines
 
 README_MARKERS = (
     {
@@ -126,8 +175,10 @@ def _render_global_index(items: "OrderedDict[str, list[str]]", index_header: str
         if content:
             content.append("")
         content.append(f"### {label}")
-        for file_path in files:
-            content.append(f"- `{file_path}`")
+        section = SECTION_BY_LABEL.get(label)
+        base_folder = section.folder if section else ""
+        tree = _build_tree_structure(files, base_folder)
+        content.extend(_render_tree_lines(tree, 0))
     if content:
         lines.append("")
         lines.extend(content)
@@ -139,11 +190,13 @@ def _render_global_index(items: "OrderedDict[str, list[str]]", index_header: str
 
 
 def _render_local_index(files: list[str], index_header: str, folder_path: pathlib.Path) -> list[str]:
+    """Render a hierarchical snippet index for a specific section README."""
+
     lines = [INDEX_MARKER_START, index_header, ""]
     if files:
-        for file_path in files:
-            relative = (ROOT / file_path).relative_to(folder_path).as_posix()
-            lines.append(f"- `{relative}`")
+        base_folder = folder_path.relative_to(ROOT).as_posix()
+        tree = _build_tree_structure(files, base_folder)
+        lines.extend(_render_tree_lines(tree, 0))
     else:
         lines.append("_No snippets found yet._")
     lines.append(INDEX_MARKER_END)
