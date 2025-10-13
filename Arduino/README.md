@@ -15,9 +15,12 @@ This folder contains a collection of useful Arduino code snippets for various pu
 <!-- snippet-index:start -->
 ## Snippet index
 
-- `Sensors/ADXL345/ADXL345.ino`
-- `Utility/OverflowMillis.ino`
-- `Utility/ScanI2C.ino`
+- `Sensors`
+  - `ADXL345`
+    - `ADXL345.ino`
+- `Utility`
+  - `OverflowMillis.ino`
+  - `ScanI2C.ino`
 <!-- snippet-index:end -->
 
 ## How to contribute

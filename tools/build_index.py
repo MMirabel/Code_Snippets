@@ -5,8 +5,8 @@
 # AUTHOR:           Ing. Mirko Mirabella
 #                   m.mirabella@neptunengineering.com
 #                   www.neptunengineering.com
-# REVISION:         v. 1.3
-# DATE:             14/06/2024
+# REVISION:         v. 1.4
+# DATE:             13/10/2025
 # **********************************************************************************************/
 """Generate snippet indexes inside the repository READMEs."""
 
@@ -190,11 +190,13 @@ def _render_global_index(items: "OrderedDict[str, list[str]]", index_header: str
 
 
 def _render_local_index(files: list[str], index_header: str, folder_path: pathlib.Path) -> list[str]:
+    """Render a hierarchical snippet index for a specific section README."""
+
     lines = [INDEX_MARKER_START, index_header, ""]
     if files:
-        for file_path in files:
-            relative = (ROOT / file_path).relative_to(folder_path).as_posix()
-            lines.append(f"- `{relative}`")
+        base_folder = folder_path.relative_to(ROOT).as_posix()
+        tree = _build_tree_structure(files, base_folder)
+        lines.extend(_render_tree_lines(tree, 0))
     else:
         lines.append("_No snippets found yet._")
     lines.append(INDEX_MARKER_END)
