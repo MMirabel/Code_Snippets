@@ -12,7 +12,9 @@
 
 The module exposes reusable helpers that append a path to the ignore list,
 remove it from Git tracking and optionally create a descriptive commit. It is
-designed for interactive command-line usage while remaining importable."""
+designed for interactive command-line usage while remaining importable.
+
+Run the code into a Git repository to add a path to .gitignore:"""
 
 from __future__ import annotations
 
